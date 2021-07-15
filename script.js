@@ -2,7 +2,7 @@ window.addEventListener('load', function () {
   var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
   var source = audioCtx.createBufferSource();
   var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://docs.google.com/uc?export=open&id=1p-Flxk0uTD-BzoYq6_7BqdAtOwjb-4jO');
+  xhr.open('GET', 'Degung.mp3');
   xhr.responseType = 'arraybuffer';
   xhr.addEventListener('load', function (r) {
       audioCtx.decodeAudioData(
