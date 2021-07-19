@@ -46,15 +46,6 @@ $(document).scroll(function() {
     $(".navigation").hide();
   }
 });
-  
-AOS.init({
-  offset: 80, 
-  once: true,
-  duration: 1200
-});
-$('#content').show();
-$('#loading').hide();
-
 
 // Update the count down every 1 second
 function countDown(date) {
