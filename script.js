@@ -26,11 +26,15 @@ $(document).scroll(function() {
   }
 });
   
-AOS.init({
-  offset: 80, 
-  once: true,
-  duration: 1200
+  
+$(function() {
+  AOS.init({
+    offset: 80,
+    once: true,
+    duration: 1200
+  });
 });
+
 $('#content').show();
 $('#loading').hide();
 
