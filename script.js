@@ -26,7 +26,6 @@ $(document).scroll(function() {
   }
 });
   
-  
 $(function() {
   AOS.init({
     offset: 80,
@@ -37,15 +36,6 @@ $(function() {
 
 $('#content').show();
 $('#loading').hide();
-
-$(".navigation").hide();
-$(document).scroll(function() { 
-  if($(window).scrollTop() >= 80) {
-    $(".navigation").show();
-  }else{
-    $(".navigation").hide();
-  }
-});
 
 // Update the count down every 1 second
 function countDown(date) {
