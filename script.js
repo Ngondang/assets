@@ -21,13 +21,11 @@ $(document).scroll(function() {
   }
 });
   
-$(function() {
   AOS.init({
     offset: 80,
     once: true,
     duration: 1200
   });
-});
 
 // Update the count down every 1 second
 function countDown(date) {
