@@ -51,6 +51,22 @@ iframe{
   padding: 0.25rem !important;
 }
 
+#cover{
+  display: none;
+  height: 100vh;
+ }
+      
+#cover div{
+  top: 50%;
+  position: relative;
+  transform: translateY(-60%)
+}
+      
+#open{
+  transform: translateY(20vh)
+}
+      
+
 #story h5{
   background-color: #343a40 !important;
   display: inline-block;
