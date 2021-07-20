@@ -1,21 +1,16 @@
-window.addEventListener('load', function () {
-  var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
-  var source = audioCtx.createBufferSource();
-  var xhr = new XMLHttpRequest();
-  xhr.open('GET', 'https://cdn.jsdelivr.net/gh/Ngondang/assets/Degung.mp3');
-  xhr.responseType = 'arraybuffer';
-  xhr.addEventListener('load', function (r) {
-      audioCtx.decodeAudioData(
-              xhr.response, 
-              function (buffer) {
-                  source.buffer = buffer;
-                  source.connect(audioCtx.destination);
-                  source.loop = false;
-              });
-      source.start(0);
-  });
-  xhr.send();
-});
+$(window).ready(function () {
+  $('#cover').show();
+  $('#loading').hide();
+}) 
+    
+var audio = new Audio();
+audio.src = "Degung.mp3";
+    
+$('#open').on('click', function(){
+  $('#cover').hide();
+  $('#content').show();
+    audio.play();
+})
 
 $(".navigation").hide();
 $(document).scroll(function() { 
@@ -33,9 +28,6 @@ $(function() {
     duration: 1200
   });
 });
-
-$('#content').show();
-$('#loading').hide();
 
 // Update the count down every 1 second
 function countDown(date) {
