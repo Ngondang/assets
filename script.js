@@ -1,10 +1,15 @@
 $(window).ready(function () {
+  AOS.init({
+    offset: 80,
+    once: true,
+    duration: 1200
+  });
   $('#cover').show();
   $('#loading').hide();
 }) 
     
 var audio = new Audio();
-audio.src = "Degung.mp3";
+audio.src = "https://cdn.jsdelivr.net/gh/Ngondang/assets/Degung.mp3;
     
 $('#open').on('click', function(){
   $('#cover').hide();
@@ -20,12 +25,7 @@ $(document).scroll(function() {
     $(".navigation").hide();
   }
 });
-  
-  AOS.init({
-    offset: 80,
-    once: true,
-    duration: 1200
-  });
+ 
 
 // Update the count down every 1 second
 function countDown(date) {
