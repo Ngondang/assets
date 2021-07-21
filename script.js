@@ -9,7 +9,7 @@ $(window).ready(function () {
 }) 
     
 var audio = new Audio();
-audio.src = "https://cdn.jsdelivr.net/gh/Ngondang/assets/Degung.mp3;
+audio.src = "https://cdn.jsdelivr.net/gh/ngondang/assets/Degung.mp3;
     
 $('#open').on('click', function(){
   $('#cover').hide();
