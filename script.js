@@ -6,7 +6,6 @@ $(window).ready(function () {
   });
   $('#cover').show();
   $('#loading').hide();
-}) 
     
 var audio = new Audio();
 audio.src = "https://cdn.jsdelivr.net/gh/ngondang/assets/Degung.mp3;
@@ -54,3 +53,4 @@ function countDown(date) {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 };
+});
