@@ -6,9 +6,17 @@ $(window).ready(function () {
   });
   $('#cover').show();
   $('#loading').hide();
+});
+    
+window.addEventListener('load', AOS.refresh());
     
 var audio = new Audio();
 audio.src = "https://cdn.jsdelivr.net/gh/ngondang/assets/Degung.mp3";
+
+audio.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+}, false);
     
 $('#open').on('click', function(){
   $('#cover').hide();
@@ -53,4 +61,3 @@ function countDown(date) {
     document.getElementById("demo").innerHTML = "EXPIRED";
   }
 };
-});
