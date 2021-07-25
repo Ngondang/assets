@@ -1,14 +1,5 @@
-$(window).ready(function () {
-  AOS.init({
-    offset: 80,
-    once: true,
-    duration: 1200
-  });
-  $('#cover').show();
-  $('#loading').hide();
-});
-    
-window.addEventListener('load', AOS.refresh());
+$('#cover').show();
+$('#loading').hide();
     
 var audio = new Audio();
 audio.src = "https://cdn.jsdelivr.net/gh/ngondang/assets/Degung.mp3";
@@ -21,7 +12,12 @@ audio.addEventListener('ended', function() {
 $('#open').on('click', function(){
   $('#cover').hide();
   $('#content').show();
-    audio.play();
+  AOS.init({
+    offset: 80,
+    once: true,
+    duration: 1200
+  });
+  audio.play();
 })
 
 $(".navigation").hide();
