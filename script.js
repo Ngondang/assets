@@ -69,9 +69,4 @@ function countDown(date) {
   document.getElementById("jam").innerHTML = hours;
   document.getElementById("menit").innerHTML = minutes;
   document.getElementById("detik").innerHTML = seconds;
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
 };
