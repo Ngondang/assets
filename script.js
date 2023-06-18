@@ -1,6 +1,6 @@
 $('#cover').show();
 $('#loading').hide();
-    
+
 var audio = new Audio();
 audio.src = "https://cdn.jsdelivr.net/gh/ngondang/assets/Degung.mp3";
 
@@ -10,8 +10,26 @@ audio.addEventListener('ended', function() {
 }, false);
     
 $('#open').on('click', function(){
-  $('#cover').hide();
-  $('#content').show();
+    $('#loading').show();
+    // If all images have loaded
+    var imgs = document.images,
+        len = imgs.length,
+        counter = 0;
+    
+    [].forEach.call( imgs, function( img ) {
+        if(img.complete)
+        incrementCounter();
+        else
+        img.addEventListener( 'load', incrementCounter, false );
+    } );
+    
+    function incrementCounter() {
+        counter++;
+        if ( counter === len ) {
+            $('#loading').hide();
+            $('#cover').hide();
+            $('#content').show();
+        }
   AOS.init({
     offset: 80,
     once: true,
