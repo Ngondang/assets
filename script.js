@@ -30,12 +30,13 @@ $('#open').on('click', function(){
             $('#cover').hide();
             $('#content').show();
         }
-  AOS.init({
-    offset: 80,
-    once: true,
-    duration: 1200
-  });
-  audio.play();
+      }
+    AOS.init({
+      offset: 80,
+      once: true,
+      duration: 1200
+    });
+    audio.play();
 })
 
 $(".navigation").hide();
