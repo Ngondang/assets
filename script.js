@@ -11,7 +11,7 @@ audio.addEventListener('ended', function() {
     
 $('#open').on('click', function(){
     $('#loading').show();
-    // If all images have loaded
+    // If all images have loaded show
     var imgs = document.images,
         len = imgs.length,
         counter = 0;
