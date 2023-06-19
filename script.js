@@ -34,6 +34,7 @@ audio.addEventListener('ended', function() {
 }, false);
     
 $('#open').on('click', function(){
+    $('#cover').hide();
     $('#loading').show();
     // If all images have loaded show
     var imgs = document.images,
@@ -51,7 +52,6 @@ $('#open').on('click', function(){
         counter++;
         if ( counter === len ) {
             $('#loading').hide();
-            $('#cover').hide();
             $('#content').show();
         }
       }
