@@ -51,16 +51,16 @@ $('#open').on('click', function(){
     function incrementCounter() {
         counter++;
         if ( counter === len ) {
-            $('#loading').hide();
-            $('#content').show();
+          $('#loading').hide();
+          $('#content').show();
+          AOS.init({
+            offset: 80,
+            once: true,
+            duration: 1200
+          });
+          audio.play();
         }
       }
-    AOS.init({
-      offset: 80,
-      once: true,
-      duration: 1200
-    });
-    audio.play();
 })
 
 $(".navigation").hide();
